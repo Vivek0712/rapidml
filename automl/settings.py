@@ -25,7 +25,7 @@ SECRET_KEY = '%m9s@u$jqz9t#^@!#fji6exq)^a1=3^91fe6hak0&gviht_pu%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.16.2.219', 'localhost']
+ALLOWED_HOSTS = ['rapidml.herokuapp.com','rapidml.ml', 'localhost']
 
 
 # Application definition
@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'automl.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'automl',
-        'USER': 'root',
-        'PASSWORD': 'harish',
-        'HOST': 'localhost',
-        'PORT': ''
+        'NAME': 'd5ht6junec8djv',
+        'USER': 'lasihuqlcgvohh',
+        'PASSWORD': '491be0839ddef76dfaf48d2b2e7a5d02009c66494096217e6372b5d9fa3aa232',
+        'HOST': 'ec2-54-83-9-169.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -135,4 +135,16 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'visualise/static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'home/static'),
+    os.path.join(BASE_DIR, 'preprocessing/static'),
+    os.path.join(BASE_DIR, 'visualization/static'),
+    os.path.join(BASE_DIR, 'hyperparametertuning/static'),
 )
