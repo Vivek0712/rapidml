@@ -143,8 +143,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'home/static'),
-    os.path.join(BASE_DIR, 'preprocessing/static'),
-    os.path.join(BASE_DIR, 'visualization/static'),
-    os.path.join(BASE_DIR, 'hyperparametertuning/static'),
+    os.path.join(BASE_DIR, 'visualise/static'),
+    
 )
